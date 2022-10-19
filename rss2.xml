@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>I LOVE STUDY</title>
+    <link>https://wzjian1018.github.io/</link>
+    
+    <atom:link href="https://wzjian1018.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Wed, 19 Oct 2022 11:27:36 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Matlab SJTU Note</title>
+      <link>https://wzjian1018.github.io/2022/10/19/Matlab-SJTU/</link>
+      <guid>https://wzjian1018.github.io/2022/10/19/Matlab-SJTU/</guid>
+      <pubDate>Wed, 19 Oct 2022 06:48:33 GMT</pubDate>
+      
+      <description>&lt;h1 id=&quot;COURSE-MS3901-MATLAB&quot;&gt;&lt;a href=&quot;#COURSE-MS3901-MATLAB&quot; class=&quot;headerlink&quot; title=&quot;COURSE:MS3901 MATLAB&quot;&gt;&lt;/a&gt;&lt;em&gt;&lt;strong&gt;COURSE:MS3901 MATLAB&lt;/strong&gt;&lt;/em&gt;&lt;/h1&gt;&lt;h2 id=&quot;Section-1-Basic-Operation&quot;&gt;&lt;a href=&quot;#Section-1-Basic-Operation&quot; class=&quot;headerlink&quot; title=&quot;Section 1: Basic Operation&quot;&gt;&lt;/a&gt;&lt;strong&gt;Section 1: Basic Operation&lt;/strong&gt;&lt;/h2&gt;&lt;h3 id=&quot;1-数据类型&quot;&gt;&lt;a href=&quot;#1-数据类型&quot; class=&quot;headerlink&quot; title=&quot;1.数据类型&quot;&gt;&lt;/a&gt;1.数据类型&lt;/h3&gt;&lt;h3 id=&quot;2-常用数学函数&quot;&gt;&lt;a href=&quot;#2-常用数学函数&quot; class=&quot;headerlink&quot; title=&quot;2.常用数学函数&quot;&gt;&lt;/a&gt;2.常用数学函数&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;三角函数：输入是弧度制，若输入是角度制则在末尾加’d’（如&lt;code&gt;sind(90)=1&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;abs()&lt;/code&gt;：可以求绝对值，复数的模，和字符串的ASCII码值&lt;/li&gt;
+&lt;li&gt;取整函数：常用的取整函数有&lt;code&gt;floor&lt;/code&gt;,&lt;code&gt;ceil&lt;/code&gt;,&lt;code&gt;round&lt;/code&gt;,&lt;code&gt;fix&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Input function&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Function&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;floor&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;向下取整&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;floor(3.4)&amp;#x3D;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;ceil&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;向上取整&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;ceil(3.4)&amp;#x3D;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;round&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;四舍五入&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;round(3.4)&amp;#x3D;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;fix&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;近零取整&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;fix(-2.1)&amp;#x3D;-2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="COURSE-MS3901-MATLAB"><a href="#COURSE-MS3901-MATLAB" class="headerlink" title="COURSE:MS3901 MATLAB"></a><em><strong>COURSE:MS3901 MATLAB</strong></em></h1><h2 id="Section-1-Basic-Operation"><a href="#Section-1-Basic-Operation" class="headerlink" title="Section 1: Basic Operation"></a><strong>Section 1: Basic Operation</strong></h2><h3 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a>1.数据类型</h3><h3 id="2-常用数学函数"><a href="#2-常用数学函数" class="headerlink" title="2.常用数学函数"></a>2.常用数学函数</h3><ul><li>三角函数：输入是弧度制，若输入是角度制则在末尾加’d’（如<code>sind(90)=1</code>）</li><li><code>abs()</code>：可以求绝对值，复数的模，和字符串的ASCII码值</li><li>取整函数：常用的取整函数有<code>floor</code>,<code>ceil</code>,<code>round</code>,<code>fix</code></li></ul><table><thead><tr><th align="left">Input function</th><th align="center">Function</th><th align="left">Example</th></tr></thead><tbody><tr><td align="left">floor</td><td align="center">向下取整</td><td align="left">floor(3.4)&#x3D;3</td></tr><tr><td align="left">ceil</td><td align="center">向上取整</td><td align="left">ceil(3.4)&#x3D;4</td></tr><tr><td align="left">round</td><td align="center">四舍五入</td><td align="left">round(3.4)&#x3D;3</td></tr><tr><td align="left">fix</td><td align="center">近零取整</td><td align="left">fix(-2.1)&#x3D;-2</td></tr></tbody></table><span id="more"></span><h3 id="3-常用逻辑函数"><a href="#3-常用逻辑函数" class="headerlink" title="3.常用逻辑函数"></a>3.常用逻辑函数</h3><p><img src="/images/matlab_logic_func.jpg"></p>]]></content:encoded>
+      
+      
+      <category domain="https://wzjian1018.github.io/categories/TECH/">TECH</category>
+      
+      <category domain="https://wzjian1018.github.io/categories/SJTU/">SJTU</category>
+      
+      
+      <category domain="https://wzjian1018.github.io/tags/MATLAB/">MATLAB</category>
+      
+      <category domain="https://wzjian1018.github.io/tags/SJTU/">SJTU</category>
+      
+      <category domain="https://wzjian1018.github.io/tags/tech/">tech</category>
+      
+      
+      <comments>https://wzjian1018.github.io/2022/10/19/Matlab-SJTU/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>NEWS:TECH COLUMN IS FORMALLY ESTABLISHED</title>
+      <link>https://wzjian1018.github.io/2022/10/19/tech-news-0/</link>
+      <guid>https://wzjian1018.github.io/2022/10/19/tech-news-0/</guid>
+      <pubDate>Wed, 19 Oct 2022 02:09:19 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;🤖Tech-Column-is-Open-Now&quot;&gt;&lt;a href=&quot;#🤖Tech-Column-is-Open-Now&quot; class=&quot;headerlink&quot; title=&quot;🤖Tech Column is Open Now!&quot;&gt;&lt;/a&gt;🤖Tech Col</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="🤖Tech-Column-is-Open-Now"><a href="#🤖Tech-Column-is-Open-Now" class="headerlink" title="🤖Tech Column is Open Now!"></a>🤖Tech Column is Open Now!</h1><p>I decided to open a column for techs I learnt, but at present the blogs will only be related to the lessons I learnt form school.</p><p>Because mid-term exam is close, I will use this chance to review the knowledge at the same time.</p><h1 id="🐱‍💻Classification"><a href="#🐱‍💻Classification" class="headerlink" title="🐱‍💻Classification"></a>🐱‍💻Classification</h1><p>For now, I will open the columns below</p><ol><li>Modern Cryptograph</li><li>Information Coding and Theroy</li><li>Network Secruity Technology</li></ol>]]></content:encoded>
+      
+      
+      <category domain="https://wzjian1018.github.io/categories/TECH/">TECH</category>
+      
+      
+      <category domain="https://wzjian1018.github.io/tags/SJTU/">SJTU</category>
+      
+      <category domain="https://wzjian1018.github.io/tags/tech/">tech</category>
+      
+      <category domain="https://wzjian1018.github.io/tags/news/">news</category>
+      
+      
+      <comments>https://wzjian1018.github.io/2022/10/19/tech-news-0/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>BREAKING NEWS:WUKE MUSIC COLUMN IS OPEN</title>
+      <link>https://wzjian1018.github.io/2022/10/18/Music-Cao/</link>
+      <guid>https://wzjian1018.github.io/2022/10/18/Music-Cao/</guid>
+      <pubDate>Tue, 18 Oct 2022 15:15:26 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;🎵-WUKE-MUSIC-IS-ON-THE-WAY&quot;&gt;&lt;a href=&quot;#🎵-WUKE-MUSIC-IS-ON-THE-WAY&quot; class=&quot;headerlink&quot; title=&quot;🎵 WUKE MUSIC IS ON THE WAY&quot;&gt;&lt;/a&gt;🎵 WU</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="🎵-WUKE-MUSIC-IS-ON-THE-WAY"><a href="#🎵-WUKE-MUSIC-IS-ON-THE-WAY" class="headerlink" title="🎵 WUKE MUSIC IS ON THE WAY"></a>🎵 WUKE MUSIC IS ON THE WAY</h1><h2 id="👾intro"><a href="#👾intro" class="headerlink" title="👾intro"></a>👾intro</h2><p>This is a column specially designed for my bro WuKe’s comments on music.</p><p>This column will also include the music Wuke recommanded😍.</p>]]></content:encoded>
+      
+      
+      <category domain="https://wzjian1018.github.io/categories/Music/">Music</category>
+      
+      
+      <category domain="https://wzjian1018.github.io/tags/Music/">Music</category>
+      
+      <category domain="https://wzjian1018.github.io/tags/WUKE-Music/">WUKE_Music</category>
+      
+      
+      <comments>https://wzjian1018.github.io/2022/10/18/Music-Cao/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>BREAKING NEWS:CBM COLUMN IS OPEN</title>
+      <link>https://wzjian1018.github.io/2022/10/18/About-DCEU-0/</link>
+      <guid>https://wzjian1018.github.io/2022/10/18/About-DCEU-0/</guid>
+      <pubDate>Tue, 18 Oct 2022 13:22:51 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;Hello-Everyone-🤩&quot;&gt;&lt;a href=&quot;#Hello-Everyone-🤩&quot; class=&quot;headerlink&quot; title=&quot;Hello Everyone 🤩!&quot;&gt;&lt;/a&gt;Hello Everyone 🤩!&lt;/h1&gt;&lt;h2 id=&quot;Thi</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="Hello-Everyone-🤩"><a href="#Hello-Everyone-🤩" class="headerlink" title="Hello Everyone 🤩!"></a>Hello Everyone 🤩!</h1><h2 id="This-is-my-CBM-Column-⚡⚡"><a href="#This-is-my-CBM-Column-⚡⚡" class="headerlink" title="This is my CBM Column !!! ⚡⚡"></a>This is my <em><strong>CBM</strong></em> Column !!! ⚡⚡</h2><p>I decide to open a special column for my opinions on DCEU and MCU, also including some news about it</p>]]></content:encoded>
+      
+      
+      <category domain="https://wzjian1018.github.io/categories/DCEU/">DCEU</category>
+      
+      
+      <category domain="https://wzjian1018.github.io/tags/DCEU/">DCEU</category>
+      
+      <category domain="https://wzjian1018.github.io/tags/CBM/">CBM</category>
+      
+      
+      <comments>https://wzjian1018.github.io/2022/10/18/About-DCEU-0/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>First Blog</title>
+      <link>https://wzjian1018.github.io/2022/10/18/First-Blog/</link>
+      <guid>https://wzjian1018.github.io/2022/10/18/First-Blog/</guid>
+      <pubDate>Tue, 18 Oct 2022 08:08:14 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;Hi-Everyone-Welcome-to-my-blog&quot;&gt;&lt;a href=&quot;#Hi-Everyone-Welcome-to-my-blog&quot; class=&quot;headerlink&quot; title=&quot;Hi, Everyone! Welcome to my blog</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="Hi-Everyone-Welcome-to-my-blog"><a href="#Hi-Everyone-Welcome-to-my-blog" class="headerlink" title="Hi, Everyone! Welcome to my blog!"></a>Hi, Everyone! Welcome to my blog!</h1><h2 id="This-blog-is-a-test-blog-📂"><a href="#This-blog-is-a-test-blog-📂" class="headerlink" title="This blog is a test blog 📂"></a>This blog is a test blog 📂</h2><blockquote><p>Today is Oct 18th, 2022. 21 years ago I was borned and this is a gift I made for myself. Perhaps this blog is not as cool as others, however I am still very proud to give birth to my blog in such a short time😙. And meanwhile I really want to practice my English, my English sucks🤮.</p></blockquote><blockquote><p>I will modify this blog in the future, including the functions like log-in and local search system.🤠</p></blockquote><blockquote><p>By the way,😭 I want to go back to <strong>Tianjin</strong>, but I hate myself when I get <strong>lazy</strong></p></blockquote>]]></content:encoded>
+      
+      
+      
+      <category domain="https://wzjian1018.github.io/tags/test-blog/">test_blog</category>
+      
+      
+      <comments>https://wzjian1018.github.io/2022/10/18/First-Blog/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
