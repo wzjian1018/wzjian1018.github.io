@@ -443,9 +443,9 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : false,
-      lang       : '' || 'zh-cn',
+      lang       : 'en' || 'zh-cn',
       path       : location.pathname,
-      recordIP   : false,
+      recordIP   : true,
       serverURLs : ''
     });
   }, window.Valine);
