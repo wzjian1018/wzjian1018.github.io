@@ -9,30 +9,8 @@
     <atom:link href="https://wzjian1018.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 26 Oct 2022 11:21:05 GMT</pubDate>
+    <pubDate>Thu, 10 Nov 2022 23:56:57 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>第25期大创</title>
-      <link>https://wzjian1018.github.io/2022/10/26/project-0/</link>
-      <guid>https://wzjian1018.github.io/2022/10/26/project-0/</guid>
-      <pubDate>Wed, 26 Oct 2022 11:20:19 GMT</pubDate>
-      
-        
-        
-      <description>&lt;h1 id=&quot;安全检测工具-DEMO-说明文档&quot;&gt;&lt;a href=&quot;#安全检测工具-DEMO-说明文档&quot; class=&quot;headerlink&quot; title=&quot;安全检测工具(DEMO) 说明文档&quot;&gt;&lt;/a&gt;安全检测工具(DEMO) 说明文档&lt;/h1&gt;&lt;h2 id=&quot;1-程序运行环</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<h1 id="安全检测工具-DEMO-说明文档"><a href="#安全检测工具-DEMO-说明文档" class="headerlink" title="安全检测工具(DEMO) 说明文档"></a>安全检测工具(DEMO) 说明文档</h1><h2 id="1-程序运行环境"><a href="#1-程序运行环境" class="headerlink" title="1.程序运行环境"></a>1.程序运行环境</h2><p>操作系统：<code>Ubuntu 22.04</code><br>Python 解释器：<code>Python 3.10</code><br>Python 运行库：<code>os</code>与<code>tkinter</code> </p><h2 id="2-程序简介"><a href="#2-程序简介" class="headerlink" title="2.程序简介"></a>2.程序简介</h2><h3 id="2-1-功能支持"><a href="#2-1-功能支持" class="headerlink" title="2.1 功能支持"></a>2.1 功能支持</h3><p>目前支持的安全编译选项测试有：<code>Fortify</code>,<code>PIE(ASLR)</code>,<code>PIC</code>,<code>Rpath</code>,<code>Stack Canary</code><br><code>trapv</code>,<code>RELRO</code>和<code>NX(noexecutable)</code><br>目前尚不支持检查参数</p><h3 id="2-2-源码简介"><a href="#2-2-源码简介" class="headerlink" title="2.2 源码简介"></a>2.2 源码简介</h3><h3 id="2-2-1-特征提取部分"><a href="#2-2-1-特征提取部分" class="headerlink" title="2.2.1 特征提取部分"></a>2.2.1 特征提取部分</h3><p>特征提取分三个部分：文件符号表的提取、特征的检测、结果的显示</p><h4 id="2-2-1-1-文件符号表提取（以获取-dynamic字段为例）"><a href="#2-2-1-1-文件符号表提取（以获取-dynamic字段为例）" class="headerlink" title="2.2.1.1 文件符号表提取（以获取.dynamic字段为例）"></a>2.2.1.1 文件符号表提取（以获取<code>.dynamic</code>字段为例）</h4><pre><code>dynamic_segment_get()&#123;`log_2=&quot;$(readelf -d &quot;$1&quot;)&quot;`arr_2=($(echo $log_2 | tr &quot; &quot; &quot;\n&quot;)) `echo &quot;$&#123;arr_2[@]&#125;&quot; &gt; dynamic_segement.txt`&#125;</code></pre><h4 id="2-2-1-2-特征的检测（以fortify为例）"><a href="#2-2-1-2-特征的检测（以fortify为例）" class="headerlink" title="2.2.1.2 特征的检测（以fortify为例）"></a>2.2.1.2 特征的检测（以fortify为例）</h4><pre><code>FORTIFY()&#123;compile_code_get &quot;$1&quot;local fea=&quot;&lt;__strcpy_chk@plt&gt;&quot;for i in &quot;$&#123;arr_3[@]&#125;&quot;doif [ &quot;$fea&quot; == &quot;$i&quot; ];then flag_fortify=1breakfidone&#125;</code></pre><h4 id="2-2-1-3-显示部分-以fortify为例"><a href="#2-2-1-3-显示部分-以fortify为例" class="headerlink" title="2.2.1.3 显示部分(以fortify为例)"></a>2.2.1.3 显示部分(以fortify为例)</h4><pre><code>if [ $1 -eq 1 ] &amp;&amp; [ $flag_fortify -eq 1 ] thenecho &quot;Fortify: ON&quot;fiif [ $1 -eq 1 ] &amp;&amp; [ $flag_fortify -eq 0 ]thenecho &quot;Fortify: OFF&quot;fi</code></pre><h3 id="2-2-2-显示界面部分"><a href="#2-2-2-显示界面部分" class="headerlink" title="2.2.2 显示界面部分"></a>2.2.2 显示界面部分</h3><p>使用的是<code>tkinter</code>内置库，设置和选项选择，结果显示，文档选择三个界面</p><h2 id="3-使用方法"><a href="#3-使用方法" class="headerlink" title="3.使用方法"></a>3.使用方法</h2><h3 id="3-1-方法1：直接使用封装后的-exe文件"><a href="#3-1-方法1：直接使用封装后的-exe文件" class="headerlink" title="3.1 方法1：直接使用封装后的.exe文件"></a>3.1 方法1：直接使用封装后的<code>.exe</code>文件</h3><p>点击📂<code>dist</code>文件夹中的PRP41_demo文件，直接进入界面</p><h3 id="3-2-方法2：使用python运行-py源码"><a href="#3-2-方法2：使用python运行-py源码" class="headerlink" title="3.2 方法2：使用python运行.py源码"></a>3.2 方法2：使用python运行<code>.py</code>源码</h3><p>在文件中打开<code>terminal</code>运行<code>python3 PRP41_demo</code> </p><h3 id="3-3-其他"><a href="#3-3-其他" class="headerlink" title="3.3 其他"></a>3.3 其他</h3><p>如果收到<code>Permission denied</code>的情况，可在<code>terminal</code>中尝试运行<code>chmod +x PRP41_demo main_v4</code><br>由于本程序的错误处理部分尚未完成，请选择<code>.so</code>文件进行检测，在文件夹中有<code>test</code>作为测试样例</p>]]></content:encoded>
-      
-      
-      
-      
-      <comments>https://wzjian1018.github.io/2022/10/26/project-0/#disqus_thread</comments>
-      
-    </item>
     
     <item>
       <title>🏆 My Mottos</title>
