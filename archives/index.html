@@ -164,33 +164,13 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 10 篇日志。 继续努力。</span>
+        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
       </div>
 
       
     <div class="collection-year">
       <span class="collection-header">2022</span>
     </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-11-01T13:58:47+08:00"
-              content="2022-11-01">
-          11-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/11/01/lzd/" itemprop="url">
-            <span itemprop="name">lzd</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -237,26 +217,6 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2022-10-21T10:47:57+08:00"
-              content="2022-10-21">
-          10-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/10/21/CBM-DCEU-intro/" itemprop="url">
-            <span itemprop="name">DCEU intro</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
               datetime="2022-10-20T14:23:36+08:00"
               content="2022-10-20">
           10-20
@@ -266,86 +226,6 @@
       <div class="post-title">
           <a class="post-title-link" href="/2022/10/20/Notice-Board/" itemprop="url">
             <span itemprop="name">Notice Board</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-10-19T14:48:33+08:00"
-              content="2022-10-19">
-          10-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/10/19/Matlab-SJTU/" itemprop="url">
-            <span itemprop="name">Matlab SJTU Note</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-10-19T10:09:19+08:00"
-              content="2022-10-19">
-          10-19
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/10/19/tech-news-0/" itemprop="url">
-            <span itemprop="name">NEWS:TECH COLUMN IS FORMALLY ESTABLISHED</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-10-18T23:15:26+08:00"
-              content="2022-10-18">
-          10-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/10/18/Music-Cao/" itemprop="url">
-            <span itemprop="name">BREAKING NEWS:WUKE MUSIC COLUMN IS OPEN</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-10-18T21:22:51+08:00"
-              content="2022-10-18">
-          10-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/10/18/About-DCEU-0/" itemprop="url">
-            <span itemprop="name">BREAKING NEWS:CBM COLUMN IS OPEN</span>
           </a>
       </div>
 
@@ -408,6 +288,22 @@
   }
 </script>
 
+<% if (theme.valine && post.comments) { %>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
+    new Valine({
+        el: '#vcomments' ,
+        appId: '<%= theme.v_appId %>',
+        appKey: '<%= theme.v_appKey %>',
+        notify:false, 
+        verify:false, 
+        avatar:'mp', 
+        placeholder: 'just go go' 
+    });
+    </script>
+<% } %>
+
         </div>
           
   
@@ -446,20 +342,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -613,7 +503,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
     new Valine({
       el         : '#valine-comments',
-      verify     : false,
+      verify     : true,
       notify     : true,
       appId      : 'JxBZc8SmtIYdFb12LnljhAbN-MdYXbMMI',
       appKey     : 'V9L2LVTujZ7hfBwxu65YZMpx',

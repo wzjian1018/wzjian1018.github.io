@@ -229,6 +229,22 @@
   }
 </script>
 
+<% if (theme.valine && post.comments) { %>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
+    new Valine({
+        el: '#vcomments' ,
+        appId: '<%= theme.v_appId %>',
+        appKey: '<%= theme.v_appKey %>',
+        notify:false, 
+        verify:false, 
+        avatar:'mp', 
+        placeholder: 'just go go' 
+    });
+    </script>
+<% } %>
+
         </div>
           
   
@@ -267,20 +283,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -434,7 +444,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
     new Valine({
       el         : '#valine-comments',
-      verify     : false,
+      verify     : true,
       notify     : true,
       appId      : 'JxBZc8SmtIYdFb12LnljhAbN-MdYXbMMI',
       appKey     : 'V9L2LVTujZ7hfBwxu65YZMpx',

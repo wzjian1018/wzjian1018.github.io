@@ -185,10 +185,10 @@
       <div class="post-body">
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-              目前共计 9 个标签
+              目前共计 2 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/CBM/" style="font-size: 30px; color: #111">CBM</a> <a href="/tags/DCEU/" style="font-size: 30px; color: #111">DCEU</a> <a href="/tags/MATLAB/" style="font-size: 12px; color: #ccc">MATLAB</a> <a href="/tags/Music/" style="font-size: 12px; color: #ccc">Music</a> <a href="/tags/SJTU/" style="font-size: 30px; color: #111">SJTU</a> <a href="/tags/WUKE-Music/" style="font-size: 12px; color: #ccc">WUKE_Music</a> <a href="/tags/news/" style="font-size: 30px; color: #111">news</a> <a href="/tags/tech/" style="font-size: 30px; color: #111">tech</a> <a href="/tags/test-blog/" style="font-size: 12px; color: #ccc">test_blog</a>
+              <a href="/tags/news/" style="font-size: 12px; color: #ccc">news</a> <a href="/tags/test-blog/" style="font-size: 12px; color: #ccc">test_blog</a>
             </div>
           </div>
         
@@ -229,6 +229,22 @@
   }
 </script>
 
+<% if (theme.valine && post.comments) { %>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="vcomments"></div>
+    <script>
+    new Valine({
+        el: '#vcomments' ,
+        appId: '<%= theme.v_appId %>',
+        appKey: '<%= theme.v_appKey %>',
+        notify:false, 
+        verify:false, 
+        avatar:'mp', 
+        placeholder: 'just go go' 
+    });
+    </script>
+<% } %>
+
         </div>
           
   
@@ -267,20 +283,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -434,7 +444,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
     new Valine({
       el         : '#valine-comments',
-      verify     : false,
+      verify     : true,
       notify     : true,
       appId      : 'JxBZc8SmtIYdFb12LnljhAbN-MdYXbMMI',
       appKey     : 'V9L2LVTujZ7hfBwxu65YZMpx',
